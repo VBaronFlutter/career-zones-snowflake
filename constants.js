@@ -644,7 +644,7 @@ export const tracks: Tracks = {
   },
 
   "GOVERNANCE": {
-    "displayName": "GOVERNANCE",
+    "displayName": "Govenance",
     "category": "DATA",
     "description": "",
     "milestones": [{

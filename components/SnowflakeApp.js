@@ -155,6 +155,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             align-content: center;
             justify-content: space-between;
           }
+          section {
+            border-bottom: 2px solid green;
+            margin-bottom: 40px;
+          }
         `}</style>
 
         <header style={{margin: '19px auto 20px'}}>
@@ -164,18 +168,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           </a>
         </header>
 
-        <div style={{display: 'flex'}}>
+        <section style={{display: 'flex'}}>
           <div style={{flex: 1}}>
-            <p>Welcome message</p>
-          </div>
-          <div style={{flex: 0}}>
-            <NightingaleChart
-                milestoneByTrack={this.state.milestoneByTrack}
-                focusedTrackId={this.state.focusedTrackId}
-                handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
-          </div>
-        </div>
-        <TrackSelector
+          <TrackSelector
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrackId={this.state.focusedTrackId}
             setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
@@ -184,6 +179,14 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}
             increaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, 1)}
             decreaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, -1)} />
+          </div>
+          <div style={{flex: 0}}>
+            <NightingaleChart
+                milestoneByTrack={this.state.milestoneByTrack}
+                focusedTrackId={this.state.focusedTrackId}
+                handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+          </div>
+        </section>
         <Track
             milestoneByTrack={this.state.milestoneByTrack}
             trackId={this.state.focusedTrackId}
