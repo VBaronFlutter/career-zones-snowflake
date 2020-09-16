@@ -3,8 +3,8 @@ import * as d3 from 'd3'
 
 export type TrackId = 'ENGINEERING' | 'DATAMANAGE' | 'PROCESS' | 'SECURITY' | 
 'USINGDATA' | 'TERMINOLOGY' | 'ANALYSIS' | 'GOVERNANCE' | 'CLIENTS' | 'FINANCIAL' | 
-'SALES' | 'BUSINESS' | 'COMMUNICATION' | 'TEAMWORK' | 'PROBELMSOLVING' | 'INFLUENCING'
-export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
+'SALES' | 'BUSINESS' | 'ACCOUNTABILITY' | 'COMMUNICATION' | 'DEVELOPMENT'
+export type Milestone = 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
   'ENGINEERING': Milestone,
@@ -19,16 +19,14 @@ export type MilestoneMap = {
   'FINANCIAL': Milestone,
   'SALES': Milestone,
   'BUSINESS': Milestone,
+  'ACCOUNTABILITY': Milestone,
   'COMMUNICATION': Milestone,
-  'TEAMWORK': Milestone,
-  'PROBELMSOLVING': Milestone,
-  'INFLUENCING': Milestone
+  'DEVELOPMENT': Milestone
 }
-export const milestones = [0, 1, 2, 3, 4, 5]
+export const milestones = [1, 2, 3, 4, 5]
 
 export const milestoneToPoints = (milestone: Milestone): number => {
   switch (milestone) {
-    case 0: return 0
     case 1: return 1
     case 2: return 3
     case 3: return 6
@@ -68,25 +66,6 @@ export type Track = {
     examples: string[]
   }[]
 }
-
-type Tracks = {|
-  'ENGINEERING': Track,
-  'DATAMANAGE': Track,
-  'PROCESS': Track,
-  'SECURITY': Track,
-  'USINGDATA': Track,
-  'TERMINOLOGY': Track,
-  'ANALYSIS': Track,
-  'GOVERNANCE': Track,
-  'CLIENTS': Track,
-  'FINANCIAL': Track,
-  'SALES': Track,
-  'BUSINESS': Track,
-  'COMMUNICATION': Track,
-  'TEAMWORK': Track,
-  'PROBELMSOLVING': Track,
-  'INFLUENCING': Track
-|}
 
 export const tracks: Tracks = {
   "ENGINEERING": {
@@ -1038,6 +1017,91 @@ export const tracks: Tracks = {
     }],
   },
 
+  "ACCOUNTABILITY": {
+    "displayName": "Accountability",
+    "category": "PROFESSIONAL",
+    "description": "",
+    "milestones": [{
+      "summary": "Follow",
+      "signals": [
+          "Time Management",
+          "Risk Assessment",
+          "Decision Making",
+          "Problem Solving"
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "Assist",
+      "signals": [
+          "Time Management",
+          "Risk Assessment",
+          "Decision Making",
+          "Problem Solving"
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "Apply",
+      "signals": [
+          "Time Management",
+          "Risk Assessment",
+          "Decision Making",
+          "Problem Solving"
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "Enable",
+      "signals": [
+          "Time Management",
+          "Risk Assessment",
+          "Decision Making",
+          "Problem Solving"
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "Advise/Ensure",
+      "signals": [
+          "Time Management",
+          "Risk Assessment",
+          "Decision Making",
+          "Problem Solving"
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "Initiate/Influence",
+      "signals": [
+          "Time Management",
+          "Risk Assessment",
+          "Decision Making",
+          "Problem Solving"
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }],
+  },
+
   "COMMUNICATION": {
     "displayName": "Communication",
     "category": "PROFESSIONAL",
@@ -1045,9 +1109,10 @@ export const tracks: Tracks = {
     "milestones": [{
       "summary": "Follow",
       "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
+          "Feedback",
+          "Influencing skills",
+          "Difficult conversations",
+          "Stakeholder management"
       ],
       "examples": [
           "Output One",
@@ -1057,9 +1122,10 @@ export const tracks: Tracks = {
     }, {
       "summary": "Assist",
       "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
+          "Feedback",
+          "Influencing skills",
+          "Difficult conversations",
+          "Stakeholder management"
       ],
       "examples": [
           "Output One",
@@ -1069,9 +1135,10 @@ export const tracks: Tracks = {
     }, {
       "summary": "Apply",
       "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
+          "Feedback",
+          "Influencing skills",
+          "Difficult conversations",
+          "Stakeholder management"
       ],
       "examples": [
           "Output One",
@@ -1081,9 +1148,10 @@ export const tracks: Tracks = {
     }, {
       "summary": "Enable",
       "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
+          "Feedback",
+          "Influencing skills",
+          "Difficult conversations",
+          "Stakeholder management"
       ],
       "examples": [
           "Output One",
@@ -1093,9 +1161,10 @@ export const tracks: Tracks = {
     }, {
       "summary": "Advise/Ensure",
       "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
+          "Feedback",
+          "Influencing skills",
+          "Difficult conversations",
+          "Stakeholder management"
       ],
       "examples": [
           "Output One",
@@ -1105,9 +1174,10 @@ export const tracks: Tracks = {
     }, {
       "summary": "Initiate/Influence",
       "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
+          "Feedback",
+          "Influencing skills",
+          "Difficult conversations",
+          "Stakeholder management"
       ],
       "examples": [
           "Output One",
@@ -1117,16 +1187,17 @@ export const tracks: Tracks = {
     }],
   },
 
-  "TEAMWORK": {
-    "displayName": "TEAMWORK",
+  "DEVELOPMENT": {
+    "displayName": "Shedder Development",
     "category": "PROFESSIONAL",
     "description": "",
     "milestones": [{
       "summary": "Follow",
       "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
+          "Research",
+          "Resilience",
+          "Coaching",
+          "Mentoring"
       ],
       "examples": [
           "Output One",
@@ -1136,9 +1207,10 @@ export const tracks: Tracks = {
     }, {
       "summary": "Assist",
       "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
+          "Research",
+          "Resilience",
+          "Coaching",
+          "Mentoring"
       ],
       "examples": [
           "Output One",
@@ -1148,9 +1220,10 @@ export const tracks: Tracks = {
     }, {
       "summary": "Apply",
       "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
+          "Research",
+          "Resilience",
+          "Coaching",
+          "Mentoring"
       ],
       "examples": [
           "Output One",
@@ -1160,9 +1233,10 @@ export const tracks: Tracks = {
     }, {
       "summary": "Enable",
       "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
+          "Research",
+          "Resilience",
+          "Coaching",
+          "Mentoring"
       ],
       "examples": [
           "Output One",
@@ -1172,9 +1246,10 @@ export const tracks: Tracks = {
     }, {
       "summary": "Advise/Ensure",
       "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
+          "Research",
+          "Resilience",
+          "Coaching",
+          "Mentoring"
       ],
       "examples": [
           "Output One",
@@ -1184,167 +1259,10 @@ export const tracks: Tracks = {
     }, {
       "summary": "Initiate/Influence",
       "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }],
-  },
-
-  "PROBELMSOLVING": {
-    "displayName": "Probelem Solving",
-    "category": "PROFESSIONAL",
-    "description": "",
-    "milestones": [{
-      "summary": "Follow",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Assist",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Apply",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Enable",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Advise/Ensure",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Initiate/Influence",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }],
-  },
-
-  "INFLUENCING": {
-    "displayName": "Leading and Influencing",
-    "category": "PROFESSIONAL",
-    "description": "",
-    "milestones": [{
-      "summary": "Follow",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Assist",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Apply",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Enable",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Advise/Ensure",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Initiate/Influence",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
+          "Research",
+          "Resilience",
+          "Coaching",
+          "Mentoring"
       ],
       "examples": [
           "Output One",

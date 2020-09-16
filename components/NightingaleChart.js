@@ -23,7 +23,7 @@ class NightingaleChart extends React.Component<Props> {
     super(props)
 
     this.colorScale = d3.scaleSequential(d3.interpolateWarm)
-      .domain([0, 5])
+      .domain([1, 5])
 
     this.radiusScale = d3.scaleBand()
       .domain(arcMilestones)
@@ -70,7 +70,7 @@ class NightingaleChart extends React.Component<Props> {
                 <g key={trackId} transform={`rotate(${i * 360 / trackIds.length})`}>
                   {arcMilestones.map((milestone) => {
                     const isCurrentMilestone = isCurrentTrack && milestone == currentMilestoneId
-                    const isMet = this.props.milestoneByTrack[trackId] >= milestone || milestone == 0
+                    const isMet = this.props.milestoneByTrack[trackId] >= milestone || milestone == 1
                     return (
                       <path
                           key={milestone}
@@ -86,7 +86,7 @@ class NightingaleChart extends React.Component<Props> {
                       cy="-50"
                       style={{fill: categoryColorScale(tracks[trackId].category)}}
                       className={"track-milestone " + (isCurrentTrack && !currentMilestoneId ? "track-milestone-current" : "")}
-                      onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, 0)} />
+                      onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, 1)} />
                 </g>
             )})}
           </g>

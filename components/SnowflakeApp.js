@@ -61,10 +61,9 @@ const emptyState = (): SnowflakeAppState => {
       'FINANCIAL': 0,
       'SALES': 0,
       'BUSINESS': 0,
+      'ACCOUNTABILITY': 0,
       'COMMUNICATION': 0,
-      'TEAMWORK': 0,
-      'PROBELMSOLVING': 0,
-      'INFLUENCING': 0
+      'DEVELOPMENT': 0
     },
     focusedTrackId: 'ENGINEERING'
   }
@@ -85,11 +84,10 @@ const defaultState = (): SnowflakeAppState => {
       'CLIENTS': 3,
       'FINANCIAL': 2,
       'SALES': 0,
-      'BUSINESS': 4,
+      'BUSINESS': 1,
+      'ACCOUNTABILITY': 2,
       'COMMUNICATION': 2,
-      'TEAMWORK': 2,
-      'PROBELMSOLVING': 3,
-      'INFLUENCING': 1
+      'DEVELOPMENT': 3
     },
     focusedTrackId: 'ENGINEERING'
   }
@@ -156,7 +154,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             justify-content: space-between;
           }
           section {
-            border-bottom: 2px solid green;
+            border-bottom: 2px solid #ccc;
             margin-bottom: 40px;
           }
         `}</style>
