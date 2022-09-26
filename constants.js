@@ -1,27 +1,19 @@
 // @flow
 import * as d3 from 'd3'
 
-export type TrackId = 'ENGINEERING' | 'DATAMANAGE' | 'PROCESS' | 'SECURITY' | 
-'USINGDATA' | 'TERMINOLOGY' | 'ANALYSIS' | 'GOVERNANCE' | 'CLIENTS' | 'FINANCIAL' | 
-'SALES' | 'BUSINESS' | 'ACCOUNTABILITY' | 'COMMUNICATION' | 'DEVELOPMENT'
+export type TrackId = 'PEOPLE' | 
+'CULTURE' | 'GAMECHANGER' | 'RESULTS' | 'DIRECTION' | 'STRATEGICAWARENESS' |'ENGINEERING' | 'PROCESS'
 export type Milestone = 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
+  'PEOPLE': Milestone,
+  'CULTURE': Milestone,
+  'GAMECHANGER': Milestone,
+  'RESULTS': Milestone,
+  'DIRECTION': Milestone,
+  'STRATEGICAWARENESS': Milestone,
   'ENGINEERING': Milestone,
-  'DATAMANAGE': Milestone,
-  'PROCESS': Milestone,
-  'SECURITY': Milestone,
-  'USINGDATA': Milestone,
-  'TERMINOLOGY': Milestone,
-  'ANALYSIS': Milestone,
-  'GOVERNANCE': Milestone,
-  'CLIENTS': Milestone,
-  'FINANCIAL': Milestone,
-  'SALES': Milestone,
-  'BUSINESS': Milestone,
-  'ACCOUNTABILITY': Milestone,
-  'COMMUNICATION': Milestone,
-  'DEVELOPMENT': Milestone
+  'PROCESS': Milestone
 }
 export const milestones = [1, 2, 3, 4, 5]
 
@@ -68,6 +60,476 @@ export type Track = {
 }
 
 export const tracks: Tracks = {
+  "PEOPLE": {
+    "displayName": "People",
+    "category": "RELATIONS",
+    "description": "",
+    "milestones": [{
+      "summary": "Follow",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "LEADS SELF",
+      "signals": [
+          "Is a team player.",
+          "Communicates effectively.",
+          "Works with a mentor to gain experience.",
+          "Is aware of relevant stakeholders.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS INDIVIDUALS / EXPERT / SPECIALIST",
+      "signals": [
+          "Is a team player.",
+          "Communicates effectively.",
+          "Actively listens to understand.",
+          "Works with a mentor to gain experience.",
+          "Mentors within own team.",
+          "Develops relationships with relevant stakeholders.",
+          "Contribute to retention and succession planning and recruitment.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS LEADERS / LEAD EXPERT",
+      "signals": [
+          "Is a team player.",
+          "Communicates effectively.",
+          "Applies active listening.",
+          "Develops strong relationships with relevant stakeholders.",
+          "Leverages influence to draw support to objectives.",
+          "Fostering a culture of mentoring and supports others in their growth as mentors.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS A SUB-FUNCTION / THOUGHT LEADER",
+      "signals": [
+          "Inspires, gains trust, respect and support of others.",
+          "Expert communicator conveying purpose and direction with respect, clarity and enthusiasm.",
+          "Has developed strong relationships with all relevant stakeholders.",
+          "Promoting wider understanding of strategic initiatives.",
+          "Pays attention to non-verbal communication.",
+          "Fostering a culture of cross-organisational mentoring.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS A FUNCTION",
+      "signals": [
+          "Role model for collaborative leadership.",
+          "Has the art and flare to influence.",
+          "Inspires, gains trust, respect and support of others.",
+          "Ensure an infrastructure to support varied communication methods which are cost effective and keep up with advances in technology.",
+          "Fosters a culture of concise, effective, audience-oriented communication.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }],
+  },
+
+  "CULTURE": {
+    "displayName": "Culture",
+    "category": "RELATIONS",
+    "description": "",
+    "milestones": [{
+      "summary": "Follow",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "LEADS SELF",
+      "signals": [
+        "Builds strong relationships with teammates and manager.",
+        "Embraces professionalism, work ethics and mutual respect for colleagues.",
+        "Understands the importance of security.",
+        "Values diversity and inclusion, ensuring fairness and opportunity for all.",
+        "Remain impartial when considering different perspectives.",
+      ],
+      "examples": [
+        "Output One",
+        "Output Two",
+        "Output Three",
+      ],
+    }, {
+      "summary": "LEADS INDIVIDUALS / EXPERT / SPECIALIST",
+      "signals": [
+        "Builds strong relationships with teammates, managers and business counterparts.",
+        "Approaches all work with a security lens and actively looks for security vulnerabilities.",
+        "Values difference, diversity and inclusion, ensuring fairness and opportunity for all.",
+        "Looks to define criteria in advance of making a recommendation or decision.",
+        "Endeavours to be effective in engaging all relevant parties.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS LEADERS / LEAD EXPERT",
+      "signals": [
+        "Builds strong relationships with business counterparts to better position the team.",
+        "Promotes a security first mindset across teams.",
+        "Values difference, diversity and inclusion, ensuring fairness and opportunity for all.",
+        "Acts impartiality and remains fair in all situations.",
+        "Often defines criteria and identifies relevant perspectives before making a recommendation or decision.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS A SUB-FUNCTION / THOUGHT LEADER",
+      "signals": [
+        "Maintains impartiality while working with people across the organisation.",
+        "Is committed to holding others accountable.",
+        "Promotes a security first mindset across the organisation. ",
+        "Is a role model for delivery, showing efficiency and focus, while being open to new ideas and honest about challenges.",
+        "Drives an inclusive and collaborative working culture which values diversity and encourages openness, approachability and sensitivity.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS A FUNCTION",
+      "signals": [
+        "Creates an environment where all perspectives are valued and people are encouraged to give their input.",
+        "Builds strong relationships outside of the organisation and leverages these to effectively position the business.",
+        "Works with the security team to set and refine security strategy.",
+        "Drives an inclusive and collaborative working culture which values diversity and encourages openness, approachability and sensitivity.        ",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }],
+  },
+
+  "GAMECHANGER": {
+    "displayName": "Game Changer",
+    "category": "OUTCOME",
+    "description": "",
+    "milestones": [{
+      "summary": "Follow",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "LEADS SELF",
+      "signals": [
+        "Remains curious and generates useful and creative ideas and solutions to solve challenges.",
+        "Is open to innovations and gets involved in unfamiliar tasks or new areas.",
+        "Learns and applies new methods, tools and technologies.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS INDIVIDUALS / EXPERT / SPECIALIST",
+      "signals": [
+        "Remains curious and generates useful and creative ideas and solutions to solve challenges.",
+        "Embraces change with an open-mind and an eagerness to try out new things.",
+        "Introduces new ways of looking at problems.",
+        "Uses initiative to explore and learn innovative methods, tools and technologies and applies them at work.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS LEADERS / LEAD EXPERT",
+      "signals": [
+        "Encourages others to be curious, develop and explore innovative solutions and approaches to challenges by applying expertise and fresh thinking.",
+        "Champions change with an open mind and an eagerness to try out new things.",
+        "Can take a creative idea and put it into practice.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS A SUB-FUNCTION / THOUGHT LEADER",
+      "signals": [
+        "Takes smart organisational risks to drive game changing innovations.",
+        "Champions new initiatives and encourages others to find improved ways to tackle challenges.",
+        "Fosters an environment which nurtures diverse thinking to promote curiosity and nurture innovation.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS A FUNCTION",
+      "signals": [
+        "Takes smart organisational risks to drive game changing innovations.",
+        "Invests resources and inspires others to be curious, discover and implement new ideas and solutions.",
+        "Creates an environment where innovation is nurtured and rewarded.",
+        "Actively removes barriers and practices that hinder creativity.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }],
+  },
+
+  "RESULTS": {
+    "displayName": "Results",
+    "category": "OUTCOME",
+    "description": "",
+    "milestones": [{
+      "summary": "Follow",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "LEADS SELF",
+      "signals": [
+        "Contributes to an effective peer review process.",
+        "Takes pride in delivering quality work on time, striking the right balance between tackling issues under own initiative and escalating to senior colleagues for support.",
+        "Dedicates personal time to development, completing required learning, courses and/or certifications and peer review process.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS INDIVIDUALS / EXPERT / SPECIALIST",
+      "signals": [
+        "Monitors team health and output using reliable metrics and reports.",
+        "Ensures alignment to governance, taking ownership of quality.",
+        "Leads related community of practices and champions continuous learning and development.",
+        "Leads and drives elaboration of new work.",
+        "Actively balances new features against product improvements.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS LEADERS / LEAD EXPERT",
+      "signals": [
+        "Drives team growth, recruitment and learning initiatives.",
+        "Understands other perspectives and is not hesitant to adapt an approach to achieve a successful outcome.",
+        "Mostly effective in managing change through applying insights from others and lessons learned from others.",
+        "Owns, drives and defines best practices and risks.",
+        "Visible in the wider business community, driving awareness of the brand.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS A SUB-FUNCTION / THOUGHT LEADER",
+      "signals": [
+        "Owns and implements the strategy for the sub-function in alignment with the divisional goals and objectives.",
+        "Achieves the strategy through alignment with senior managers and senior team members.",
+        "Communicates group vision throughout the sub-function to achieve key results",
+        "Coordinates on complex inter tribe projects and initiatives.",
+        
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS A FUNCTION",
+      "signals": [
+        "Sets the vision and strategy in alignment with division and group objectives.",
+        "Delivers multiple key big bets for the group through sub-functions.",
+        "Reports progress to ExCo.",
+        "Creates an environment where people are curious and encourages people to challenge and share views.",
+        "Learns and adapts an approach in order to achieve the best outcome.",
+        "Manages change skilfully and shows a way forward.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }],
+  },
+
+  "DIRECTION": {
+    "displayName": "Direction",
+    "category": "FUTURE",
+    "description": "",
+    "milestones": [{
+      "summary": "Follow",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "LEADS SELF",
+      "signals": [
+        "Supports the tribe strategy through contributions at a squad level.",
+        "Demonstrates understanding of performance drivers with guidance from their manager.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS INDIVIDUALS / EXPERT / SPECIALIST",
+      "signals": [
+        "Understands the business model in relation to current focus area, being able to see opportunities and simplify things.",
+        "Participates in the creation of the team roadmap ensuing feedback.",
+        "Simplifies tasks through proactive conversations.",
+        "Demonstrates understanding of performance drivers.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS LEADERS / LEAD EXPERT",
+      "signals": [
+        "Creates and update roadmaps across the organisation, based on strategy, constraints and feedback.",
+        "Leads by example and improves team knowledge through innovation, coaching and feedback.",
+        "Simplifies design through proactive conversations.",
+        "Defines and creates new product abilities.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS A SUB-FUNCTION / THOUGHT LEADER",
+      "signals": [
+        "Grows the sub-function through influencing, owning and backing decisions to set and achieve goals.",
+        "Fosters a culture of alignment and accountability through conversations based on organisational strategy and principles.",
+        "Ensures the sub-function is continuously working towards its goals.",
+        "Raises awareness of how bias impacts decisions.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS A FUNCTION",
+      "signals": [
+        "Provides holistic leadership.",
+        "Refines and grows the business through set strategies, ensuring governance.",
+        "Leads strategic decisions and plans with a thorough understanding of the entire business.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }],
+  },
+
+  "STRATEGICAWARENESS": {
+    "displayName": "Strategic Awareness",
+    "category": "FUTURE",
+    "description": "",
+    "milestones": [{
+      "summary": "Follow",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "LEADS SELF",
+      "signals": [
+        "Has a clear understanding of the tribe's overall strategy.",
+        "Applies what they've learnt to optimise current plans.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS INDIVIDUALS / EXPERT / SPECIALIST",
+      "signals": [
+        "Provides advanced strategy support and/or execution.",
+        "Identifies, drives and executes growth opportunities.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS LEADERS / LEAD EXPERT",
+      "signals": [
+        "Demonstrates strategic thinking and decision making.",
+        "Translates strategic plans while leading key projects.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS A SUB-FUNCTION / THOUGHT LEADER",
+      "signals": [
+        "Creates and develops longer term strategies that feed into the overall business goals.",
+        "Is aware of ongoing industry developments that may impact strategy.",
+        "Anticipates future trends and implications.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }, {
+      "summary": "LEADS A FUNCTION",
+      "signals": [
+        "Shapes long term vision for the business or the discipline.",
+        "Leads strategic decisions with a thorough understanding of the entire business.",
+        "Detect industry wide risks and opportunities and leads large group of people to navigate them.",
+      ],
+      "examples": [
+          "Output One",
+          "Output Two",
+          "Output Three",
+      ],
+    }],
+  },
+
   "ENGINEERING": {
     "displayName": "Software Engineering",
     "category": "ENG",
@@ -75,17 +537,11 @@ export const tracks: Tracks = {
     "milestones": [{
       "summary": "Follow",
       "signals": [
-        "Software Engineering: The planning, designing, creation, amending, verification, testing and documentation of new and amended software components in order to deliver agreed value to stakeholders. The identification, creation and application of agreed software development and security standards and processes. Adopting and adapting software development lifecycle models based on the context of the work and selecting appropriately from predictive (plan-driven) approaches or adaptive (iterative/agile) approaches.",
-        "Software Desing: The specification and design of software to meet defined requirements by following agreed design standards and principles. The definition of software, components, interfaces and related characteristics. The identification of concepts and patterns and the translation into a design which provides a basis for software construction and verification. The evaluation of alternative solutions and trade-offs. The facilitation of design decisions within the constraints of systems designs, design standards, quality, feasibility, extensibility and maintainability. The development and iteration of prototypes/simulations to enable informed decision-making. The adoption and adaptation of software design models, tools and techniques based on the context of the work and selecting appropriately from predictive (plan-driven) approaches or adaptive (iterative/agile) approaches.",
-        "Testing: The planning, design, management, execution and reporting of tests, using appropriate testing tools and techniques and conforming to agreed process standards and industry specific regulations. The purpose of testing is to ensure that new and amended systems, configurations, packages, or services, together with any interfaces, perform as specified (including security requirements) , and that the risks associated with deployment are adequately understood and documented. Testing includes the process of engineering, using and maintaining testware (test cases, test scripts, test reports, test plans, etc) to measure and improve the quality of the software being tested.",
       ],
       "examples": [
-        "Designs, codes, verifies, tests, documents, amends and refactors simple programs/scripts.",
-        "Reads and understands existing design documentation for simple software application or component which applies agreed modelling techniques, standards, patterns and tools.",
-        "Executes given test scripts under supervision. Records results and reports issues. Develops an understanding of the role of testing within system development, as a tool for design improvement as well as a validation process.",
       ],
     }, {
-      "summary": "Assist",
+      "summary": "LEADS SELF",
       "signals": [
         "Software Engineering: The planning, designing, creation, amending, verification, testing and documentation of new and amended software components in order to deliver agreed value to stakeholders. The identification, creation and application of agreed software development and security standards and processes. Adopting and adapting software development lifecycle models based on the context of the work and selecting appropriately from predictive (plan-driven) approaches or adaptive (iterative/agile) approaches.",
         "Software Desing: The specification and design of software to meet defined requirements by following agreed design standards and principles. The definition of software, components, interfaces and related characteristics. The identification of concepts and patterns and the translation into a design which provides a basis for software construction and verification. The evaluation of alternative solutions and trade-offs. The facilitation of design decisions within the constraints of systems designs, design standards, quality, feasibility, extensibility and maintainability. The development and iteration of prototypes/simulations to enable informed decision-making. The adoption and adaptation of software design models, tools and techniques based on the context of the work and selecting appropriately from predictive (plan-driven) approaches or adaptive (iterative/agile) approaches.",
@@ -97,7 +553,7 @@ export const tracks: Tracks = {
         "Defines test conditions for given requirements. Designs test cases and creates test scripts and supporting data, working to the specifications provided. Interprets, executes and records test cases in accordance with project test plans. Analyses and reports test activities and results. Identifies and reports issues and risks.",
       ],
     }, {
-      "summary": "Apply",
+      "summary": "LEADS INDIVIDUALS / EXPERT / SPECIALIST",
       "signals": [
         "Software Engineering: The planning, designing, creation, amending, verification, testing and documentation of new and amended software components in order to deliver agreed value to stakeholders. The identification, creation and application of agreed software development and security standards and processes. Adopting and adapting software development lifecycle models based on the context of the work and selecting appropriately from predictive (plan-driven) approaches or adaptive (iterative/agile) approaches.",
         "Software Desing: The specification and design of software to meet defined requirements by following agreed design standards and principles. The definition of software, components, interfaces and related characteristics. The identification of concepts and patterns and the translation into a design which provides a basis for software construction and verification. The evaluation of alternative solutions and trade-offs. The facilitation of design decisions within the constraints of systems designs, design standards, quality, feasibility, extensibility and maintainability. The development and iteration of prototypes/simulations to enable informed decision-making. The adoption and adaptation of software design models, tools and techniques based on the context of the work and selecting appropriately from predictive (plan-driven) approaches or adaptive (iterative/agile) approaches.",
@@ -109,7 +565,7 @@ export const tracks: Tracks = {
         "Reviews requirements and specifications, and defines test conditions. Designs test cases and test scripts under own direction, mapping back to pre-determined criteria, recording and reporting outcomes. Analyses and reports test activities and results. Identifies and reports issues and risks associated with own work."
       ],
     }, {
-      "summary": "Enable",
+      "summary": "LEADS LEADERS / LEAD EXPERT",
       "signals": [
         "Software Engineering: The planning, designing, creation, amending, verification, testing and documentation of new and amended software components in order to deliver agreed value to stakeholders. The identification, creation and application of agreed software development and security standards and processes. Adopting and adapting software development lifecycle models based on the context of the work and selecting appropriately from predictive (plan-driven) approaches or adaptive (iterative/agile) approaches.",
         "Software Desing: The specification and design of software to meet defined requirements by following agreed design standards and principles. The definition of software, components, interfaces and related characteristics. The identification of concepts and patterns and the translation into a design which provides a basis for software construction and verification. The evaluation of alternative solutions and trade-offs. The facilitation of design decisions within the constraints of systems designs, design standards, quality, feasibility, extensibility and maintainability. The development and iteration of prototypes/simulations to enable informed decision-making. The adoption and adaptation of software design models, tools and techniques based on the context of the work and selecting appropriately from predictive (plan-driven) approaches or adaptive (iterative/agile) approaches.",
@@ -121,7 +577,7 @@ export const tracks: Tracks = {
         "Accepts responsibility for creation of test cases using own in-depth technical analysis of both functional and non-functional specifications (such as reliability, efficiency, usability, maintainability and portability). Creates traceability records, from test cases back to requirements. Produces test scripts, materials and regression test packs to test new and amended software or services. Specifies requirements for environment, data, resources and tools. Interprets, executes and documents complex test scripts using agreed methods and standards. Records and analyses actions and results, and maintains a defect register. Reviews test results and modifies tests if necessary. Provides reports on progress, anomalies, risks and issues associated with the overall project. Reports on system quality and collects metrics on test cases. Provides specialist advice to support others.",
       ],
     }, {
-      "summary": "Advise/Ensure",
+      "summary": "LEADS A SUB-FUNCTION / THOUGHT LEADER",
       "signals": [
         "Software Engineering: The planning, designing, creation, amending, verification, testing and documentation of new and amended software components in order to deliver agreed value to stakeholders. The identification, creation and application of agreed software development and security standards and processes. Adopting and adapting software development lifecycle models based on the context of the work and selecting appropriately from predictive (plan-driven) approaches or adaptive (iterative/agile) approaches.",
         "Software Desing: The specification and design of software to meet defined requirements by following agreed design standards and principles. The definition of software, components, interfaces and related characteristics. The identification of concepts and patterns and the translation into a design which provides a basis for software construction and verification. The evaluation of alternative solutions and trade-offs. The facilitation of design decisions within the constraints of systems designs, design standards, quality, feasibility, extensibility and maintainability. The development and iteration of prototypes/simulations to enable informed decision-making. The adoption and adaptation of software design models, tools and techniques based on the context of the work and selecting appropriately from predictive (plan-driven) approaches or adaptive (iterative/agile) approaches.",
@@ -133,7 +589,7 @@ export const tracks: Tracks = {
         "Coordinates and manages planning of the system and/or acceptance tests, including software security testing, within a development or integration project or programme. Takes responsibility for integrity of testing and acceptance activities and coordinates the execution of these activities. Provides authoritative advice and guidance on any aspect of test planning and execution. Defines and communicates the test strategy for the project. Manages all test processes, including test plans, resources, costs, timescales, test deliverables and traceability. Manages client relationships with respect to testing matters. Identifies process improvements, and contributes to corporate testing standards and definition of best practice.",
       ],
     }, {
-      "summary": "Initiate/Influence",
+      "summary": "LEADS A FUNCTION",
       "signals": [
         "Software Engineering: The planning, designing, creation, amending, verification, testing and documentation of new and amended software components in order to deliver agreed value to stakeholders. The identification, creation and application of agreed software development and security standards and processes. Adopting and adapting software development lifecycle models based on the context of the work and selecting appropriately from predictive (plan-driven) approaches or adaptive (iterative/agile) approaches.",
         "Software Desing: The specification and design of software to meet defined requirements by following agreed design standards and principles. The definition of software, components, interfaces and related characteristics. The identification of concepts and patterns and the translation into a design which provides a basis for software construction and verification. The evaluation of alternative solutions and trade-offs. The facilitation of design decisions within the constraints of systems designs, design standards, quality, feasibility, extensibility and maintainability. The development and iteration of prototypes/simulations to enable informed decision-making. The adoption and adaptation of software design models, tools and techniques based on the context of the work and selecting appropriately from predictive (plan-driven) approaches or adaptive (iterative/agile) approaches.",
@@ -145,92 +601,7 @@ export const tracks: Tracks = {
         "Determines testing policy, and owns the supporting processes including software security testing. Takes responsibility for the management of all testing activities within a development or integration project or programme. Manages all risks associated with the testing and takes preventative action when any risks become unacceptable. Assesses and advises on the practicality of testing process alternatives, including automated testing. Initiates improvements to test processes and directs their implementation. Assesses suppliers' development and testing capabilities. Determines project testing standards for all phases, influencing all parties to conform to those standards. Manages client relationships with respect to all testing matters.",
       ],
 
-    }],
-  },
-
-  "DATAMANAGE": {
-    "displayName": "Data Engineering",
-    "category": "ENG",
-    "description": "",
-    "milestones": [{
-      "summary": "Follow",
-      "signals": [
-        "Data modelling and design: The development of models to represent and communicate data requirements and to enable organisations to understand their data assets and the relationships between real-world entities. The investigation, analysis and scoping of data requirements to support the development of software systems, data integration and data retrieval activities. The iteration, review and maintenance of data requirements and data models.",
-        "Data management: The management of practices and processes to ensure the security, integrity, safety and availability of all forms of data and data structures that make up the organisation’s information. The management of data and information in all its forms and the analysis of information structure (including logical analysis of taxonomies, data and metadata). The development of innovative ways of managing the information assets of the organisation.",
-        "Database design: The specification, design and maintenance of mechanisms for storage and access to both structured and unstructured information, in support of business information needs.",
-      ],
-      "examples": [
-        "Applies data analysis, design, and modelling techniques to maintain an existing data structure.",
-        "Assists in database support activities.",
-        "Interprets installation standards to meet project needs.",
-      ],
-    }, {
-      "summary": "Assist",
-      "signals": [
-        "Data modelling and design: The development of models to represent and communicate data requirements and to enable organisations to understand their data assets and the relationships between real-world entities. The investigation, analysis and scoping of data requirements to support the development of software systems, data integration and data retrieval activities. The iteration, review and maintenance of data requirements and data models.",
-        "Data management: The management of practices and processes to ensure the security, integrity, safety and availability of all forms of data and data structures that make up the organisation’s information. The management of data and information in all its forms and the analysis of information structure (including logical analysis of taxonomies, data and metadata). The development of innovative ways of managing the information assets of the organisation.",
-        "Database design: The specification, design and maintenance of mechanisms for storage and access to both structured and unstructured information, in support of business information needs.",
-      ],
-      "examples": [
-        "Applies data analysis, design, and modelling techniques to establish, modify or maintain a data structure and its associated components (entity descriptions, relationship descriptions, attribute definitions).",
-        "Assists in database support activities.",
-        "Interprets installation standards to meet project needs and produces database or data warehouse component specifications.",
-      ],
-    }, {
-      "summary": "Apply",
-      "signals": [
-        "Data modelling and design: The development of models to represent and communicate data requirements and to enable organisations to understand their data assets and the relationships between real-world entities. The investigation, analysis and scoping of data requirements to support the development of software systems, data integration and data retrieval activities. The iteration, review and maintenance of data requirements and data models.",
-        "Data management: The management of practices and processes to ensure the security, integrity, safety and availability of all forms of data and data structures that make up the organisation’s information. The management of data and information in all its forms and the analysis of information structure (including logical analysis of taxonomies, data and metadata). The development of innovative ways of managing the information assets of the organisation.",
-        "Database design: The specification, design and maintenance of mechanisms for storage and access to both structured and unstructured information, in support of business information needs.",
-      ],
-      "examples": [
-        "Applies data analysis, design, modelling, and quality assurance techniques, based upon a detailed understanding of business processes, to establish, modify or maintain data structures and associated components (entity descriptions, relationship descriptions, attribute definitions). Advises database designers and other application development team members on the details of data structures and associated components.",
-        "Uses database management system software and tools to collect agreed performance statistics. Carries out agreed database maintenance and administration tasks.",
-        "Develops appropriate physical database or data warehouse design elements, within set policies, to meet business change or development project data requirements. Interprets installation standards to meet project needs and produces database or data warehouse component specifications.",
-      ],
-    }, {
-      "summary": "Enable",
-      "signals": [
-        "Data modelling and design: The development of models to represent and communicate data requirements and to enable organisations to understand their data assets and the relationships between real-world entities. The investigation, analysis and scoping of data requirements to support the development of software systems, data integration and data retrieval activities. The iteration, review and maintenance of data requirements and data models.",
-        "Data management: The management of practices and processes to ensure the security, integrity, safety and availability of all forms of data and data structures that make up the organisation’s information. The management of data and information in all its forms and the analysis of information structure (including logical analysis of taxonomies, data and metadata). The development of innovative ways of managing the information assets of the organisation.",
-        "Database design: The specification, design and maintenance of mechanisms for storage and access to both structured and unstructured information, in support of business information needs.",
-        "Information assurance: The protection of integrity, availability, authenticity, non-repudiation and confidentiality of information and data in storage and in transit. The management of risk in a pragmatic and cost effective manner to ensure stakeholder confidence.",
-      ],
-      "examples": [
-        "Investigates corporate data requirements, and applies data analysis, design, modelling, and quality assurance techniques, to establish, modify or maintain data structures and their associated components (entity descriptions, relationship descriptions, attribute definitions). Provides advice and guidance to database designers and others using the data structures and associated components.",
-        "Uses database management system software and tools, and knowledge of logical database schemata, to investigate problems and collect performance statistics and create reports. Carries out routine configuration, installation, and reconfiguration of database and related products. Develops and configures tools to enable automation of database administration tasks. Identify problems and issues and recommend corrective actions.",
-        "Assesses proposed changes to object/data structures, in order to evaluate alternative options. Implements physical database designs to support transactional data requirements for performance and availability.",
-        "Interprets information assurance and security policies and applies these in order to manage risks. Provides advice and guidance to ensure adoption of and adherence to information assurance architectures, strategies, policies, standards and guidelines. Uses testing to support information assurance. Contributes to the development of policies, standards and guidelines.",
-      ],
-    }, {
-      "summary": "Advise/Ensure",
-      "signals": [
-        "Data modelling and design: The development of models to represent and communicate data requirements and to enable organisations to understand their data assets and the relationships between real-world entities. The investigation, analysis and scoping of data requirements to support the development of software systems, data integration and data retrieval activities. The iteration, review and maintenance of data requirements and data models.",
-        "Data management: The management of practices and processes to ensure the security, integrity, safety and availability of all forms of data and data structures that make up the organisation’s information. The management of data and information in all its forms and the analysis of information structure (including logical analysis of taxonomies, data and metadata). The development of innovative ways of managing the information assets of the organisation.",
-        "Database design: The specification, design and maintenance of mechanisms for storage and access to both structured and unstructured information, in support of business information needs.",
-        "Information assurance: The protection of integrity, availability, authenticity, non-repudiation and confidentiality of information and data in storage and in transit. The management of risk in a pragmatic and cost effective manner to ensure stakeholder confidence.",
-      ],
-      "examples": [
-        "Sets standards for data modelling and design tools and techniques, advises on their application, and ensures compliance. Manages the investigation of corporate data requirements, and co-ordinates the application of data analysis, design and modelling techniques, based upon a detailed understanding of the corporate information requirements, in order to establish, modify or maintain data structures and their associated components (entity descriptions, relationship descriptions, attribute definitions). Manages the iteration, review and maintenance of data requirements and data models.",
-        "Develops and maintains procedures and documentation for databases. Identifies, evaluates and manages the adoption of appropriate database administration tools and processes, including automation. Contributes to the setting of standards for definition, security and integrity of database objects and ensures conformance to these standards. Manages database configuration including installing and upgrading software and maintaining relevant documentation. Monitors database activity and resource usage. Optimises database performance and plans for forecast resource needs.",
-        "Develops and maintains specialist knowledge of database and data warehouse concepts, design principles, architectures, software and facilities. Assesses proposed changes to object/data structures, in order to evaluate alternative options. Implements physical database designs to support transactional data requirements for performance and availability. Implements data warehouse designs that support demands for business intelligence and data analytics.",
-        "Develops corporate Information assurance policy, standards and guidelines. Contributes to the development of organisational strategies that address the evolving business risk and information control requirements. Drives adoption of and adherence to policies and standards through the provision of expert advice and guidance in order to ensure architectural principles are applied, requirements are defined and rigorous security testing is applied. Monitors environmental and market trends and pro-actively assesses impact on business strategies, benefits and risks.",
-      ],
-    }, {
-      "summary": "Initiate/Influence",
-      "signals": [
-        "Data modelling and design: The development of models to represent and communicate data requirements and to enable organisations to understand their data assets and the relationships between real-world entities. The investigation, analysis and scoping of data requirements to support the development of software systems, data integration and data retrieval activities. The iteration, review and maintenance of data requirements and data models.",
-        "Data management: The management of practices and processes to ensure the security, integrity, safety and availability of all forms of data and data structures that make up the organisation’s information. The management of data and information in all its forms and the analysis of information structure (including logical analysis of taxonomies, data and metadata). The development of innovative ways of managing the information assets of the organisation.",
-        "Database design: The specification, design and maintenance of mechanisms for storage and access to both structured and unstructured information, in support of business information needs.",
-        "Information assurance: The protection of integrity, availability, authenticity, non-repudiation and confidentiality of information and data in storage and in transit. The management of risk in a pragmatic and cost effective manner to ensure stakeholder confidence.",
-      ],
-      "examples": [
-        "Sets standards for data modelling and design tools and techniques, advises on their application, and ensures compliance. Manages the investigation of corporate data requirements, and co-ordinates the application of data analysis, design and modelling techniques, based upon a detailed understanding of the corporate information requirements, in order to establish, modify or maintain data structures and their associated components (entity descriptions, relationship descriptions, attribute definitions). Manages the iteration, review and maintenance of data requirements and data models.",
-        "Develops and maintains procedures and documentation for databases. Identifies, evaluates and manages the adoption of appropriate database administration tools and processes, including automation. Contributes to the setting of standards for definition, security and integrity of database objects and ensures conformance to these standards. Manages database configuration including installing and upgrading software and maintaining relevant documentation. Monitors database activity and resource usage. Optimises database performance and plans for forecast resource needs.",
-        "Provides expert guidance in the selection, provision and use of database and data warehouse architectures, software and facilities. Provides specialist expertise in the design characteristics of database management systems (DBMS) or data warehouse products/services. Ensures that physical database design policy supports transactional data requirements for performance and availability. Ensures that data warehouse design policy supports demands for business intelligence and data analytics.",
-        "Directs the creation and review of an enterprise information assurance strategy to support the strategic requirements of the business. Ensures compliance between business strategies and information assurance by setting strategies, policies, standards and practices and leading the provision of information assurance expertise, advice and guidance across all of the organisation's information and information systems.",
-      ],
-    }],
+    },],
   },
 
   "PROCESS": {
@@ -240,17 +611,11 @@ export const tracks: Tracks = {
     "milestones": [{
       "summary": "Follow",
       "signals": [
-        "Methords & Tooling: Ensuring that appropriate methods and tools for the planning, development, testing, operation, management and maintenance of systems are adopted and used effectively throughout the organisation.",
-        "Release & Deployment: The management of the processes, systems and functions to package, build, test and deploy changes and updates (which are bounded as “releases”) into a live environment, establishing or continuing the specified Service, to enable controlled and effective handover to Operations and the user community.",
-        "Knowledge Management: The systematic management of vital knowledge to create value for the organisation by capturing, sharing, developing and exploiting the collective knowledge of the organisation to improve performance, support decision making and mitigate risks. The development of a supportive and collaborative knowledge sharing culture to drive the successful adoption of technology solutions for knowledge management. Providing access to informal, tacit knowledge as well as formal, documented, explicit knowledge by facilitating internal and external collaboration and communications.",
       ],
       "examples": [
-        "Uses existing methods and tools.",
-        "Uses the tools and techniques for specific areas of release and deployment activities.",
-        "Maintains a knowledge management database by leveraging knowledge of a specialism in order to capture and classify content, taking expert advice when required.",
       ],
     }, {
-      "summary": "Assist",
+      "summary": "LEADS SELF",
       "signals": [
         "Methords & Tooling: Ensuring that appropriate methods and tools for the planning, development, testing, operation, management and maintenance of systems are adopted and used effectively throughout the organisation.",
         "Release & Deployment: The management of the processes, systems and functions to package, build, test and deploy changes and updates (which are bounded as “releases”) into a live environment, establishing or continuing the specified Service, to enable controlled and effective handover to Operations and the user community.",
@@ -262,7 +627,7 @@ export const tracks: Tracks = {
         "Maintains knowledge management systems and content to meet business needs. Supports others to enable them to complete knowledge management activities and form knowledge management habits. Reports on progress of knowledge management activities. Configures and develops knowledge management systems and standards. Supports changes to work practices to support capture and use of knowledge.",
       ],
     }, {
-      "summary": "Apply",
+      "summary": "LEADS INDIVIDUALS / EXPERT / SPECIALIST",
       "signals": [
         "Methords & Tooling: Ensuring that appropriate methods and tools for the planning, development, testing, operation, management and maintenance of systems are adopted and used effectively throughout the organisation.",
         "Release & Deployment: The management of the processes, systems and functions to package, build, test and deploy changes and updates (which are bounded as “releases”) into a live environment, establishing or continuing the specified Service, to enable controlled and effective handover to Operations and the user community.",
@@ -274,7 +639,7 @@ export const tracks: Tracks = {
         "Organises knowledge assets and oversees the lifecycle of identifying, capturing, classifying, storing and maintaining assets. Facilitates sharing, collaboration and communication of knowledge. Monitors the use and impact of knowledge; interrogates existing knowledge content to identify issues, risks and opportunities. Implements specific knowledge management initiatives.",
       ],
     }, {
-      "summary": "Enable",
+      "summary": "LEADS LEADERS / LEAD EXPERT",
       "signals": [
         "Methords & Tooling: Ensuring that appropriate methods and tools for the planning, development, testing, operation, management and maintenance of systems are adopted and used effectively throughout the organisation.",
         "Release & Deployment: The management of the processes, systems and functions to package, build, test and deploy changes and updates (which are bounded as “releases”) into a live environment, establishing or continuing the specified Service, to enable controlled and effective handover to Operations and the user community.",
@@ -288,7 +653,7 @@ export const tracks: Tracks = {
         "Defines systems development projects which support the organisation's objectives and plans. Selects, adopts and adapts appropriate systems development methods, tools and techniques selecting appropriately from predictive (plan-driven) approaches or adaptive (iterative/agile) approaches. Ensures that senior management is both aware of and able to provide the required resources. Facilitates availability and optimum utilisation of resources. Monitors and reports on the progress of development projects, ensuring that projects are carried out in accordance with agreed architectures, standards, methods and procedures (including secure software development). Develops road maps to communicate future development activity.",
       ],
     }, {
-      "summary": "Advise/Ensure",
+      "summary": "LEADS A SUB-FUNCTION / THOUGHT LEADER",
       "signals": [
         "Methords & Tooling: Ensuring that appropriate methods and tools for the planning, development, testing, operation, management and maintenance of systems are adopted and used effectively throughout the organisation.",
         "Release & Deployment: The management of the processes, systems and functions to package, build, test and deploy changes and updates (which are bounded as “releases”) into a live environment, establishing or continuing the specified Service, to enable controlled and effective handover to Operations and the user community.",
@@ -302,7 +667,7 @@ export const tracks: Tracks = {
         "Sets policy and drives adherence to standards for systems development projects whether predictive (plan-driven) approaches or more adaptive (iterative/agile) approaches. Promotes the benefits of addressing all security issues during systems development. Identifies and manages the resources necessary for all stages (planning, estimation, execution) of systems development projects, ensuring that technical, financial and quality targets are met.",
       ],
     }, {
-      "summary": "Initiate/Influence",
+      "summary": "LEADS A FUNCTION",
       "signals": [
         "Methords & Tooling: Ensuring that appropriate methods and tools for the planning, development, testing, operation, management and maintenance of systems are adopted and used effectively throughout the organisation.",
         "Release & Deployment: The management of the processes, systems and functions to package, build, test and deploy changes and updates (which are bounded as “releases”) into a live environment, establishing or continuing the specified Service, to enable controlled and effective handover to Operations and the user community.",
@@ -314,960 +679,6 @@ export const tracks: Tracks = {
         "Sets the release policy for the organisation in the context of both development and production/operations. Ensures that management processes, tools, techniques and resources (including automation) are in place to ensure that the transition of services, service components and packages are planned and compliant and that test and validation and configuration management are partnered in all release and deployment activities. Provides authorisation for critical release activity and point of escalation.",
         "Leads the creation of a knowledge management culture. Develops an organisation-wide knowledge management strategy for capturing, organising and developing information, knowledge and stories from employees, customers and external partners. Embeds knowledge management across business units and develops strategic knowledge management capabilities. Reinforces the importance of knowledge sharing by aligning individual and organisational objectives and rewards. Identifies opportunities for strategic relationships or partnerships with customers, suppliers, and partners.",
         "Leads the definition, implementation and review of the organisation’s systems development management framework. Authorises the structure of systems development functions and platforms and is responsible for alignment with business strategy & objectives and with emerging IT and digital opportunities. Sets strategy for resource management within systems development, authorises the allocation of resources for systems development programmes, and maintains an overview of the contribution of such programmes to organisational success. Manages the quality and appropriateness of the work performed and delivers measurable business benefits.",
-      ],
-    }],
-  },
-
-  "SECURITY": {
-    "displayName": "Security & Architecture",
-    "category": "ENG",
-    "description": "",
-    "milestones": [{
-      "summary": "Follow",
-      "signals": [
-        "Information security: The selection, design, justification, implementation and operation of controls and management strategies to maintain the security, confidentiality, integrity, availability, accountability and relevant compliance of information systems with legislation, regulation and relevant standards.",
-        "Solution architecture: The design and communication of high-level structures to enable and guide the design and development of integrated solutions that meet current and future business needs. In addition to technology components, solution architecture encompasses changes to service, process, organisation, and operating models. Architecture definition must demonstrate how requirements (such as automation of business processes) are met, any requirements which are not fully met, and any options or considerations which require a business decision. The provision of comprehensive guidance on the development of, and modifications to, solution components to ensure that they take account of relevant architectures, strategies, policies, standards and practices (including security) and that existing and planned solution components remain compatible.",
-      ],
-      "examples": [
-        "Performs basic risk assessments for small information systems. Contributes to vulnerability assessments. Applies and maintains specific security controls as required by organisational policy and local risk assessments. ",
-        "Understands client arcitecture.",
-      ],
-    }, {
-      "summary": "Assist",
-      "signals": [
-        "Information security: The selection, design, justification, implementation and operation of controls and management strategies to maintain the security, confidentiality, integrity, availability, accountability and relevant compliance of information systems with legislation, regulation and relevant standards.",
-        "Solution architecture: The design and communication of high-level structures to enable and guide the design and development of integrated solutions that meet current and future business needs. In addition to technology components, solution architecture encompasses changes to service, process, organisation, and operating models. Architecture definition must demonstrate how requirements (such as automation of business processes) are met, any requirements which are not fully met, and any options or considerations which require a business decision. The provision of comprehensive guidance on the development of, and modifications to, solution components to ensure that they take account of relevant architectures, strategies, policies, standards and practices (including security) and that existing and planned solution components remain compatible.",
-      ],
-      "examples": [
-        "Communicates information security risks and issues to business managers and others. Performs basic risk assessments for small information systems. Contributes to vulnerability assessments. Applies and maintains specific security controls as required by organisational policy and local risk assessments. Investigates suspected attacks. Responds to security breaches in line with security policy and records the incidents and action taken.",
-        "Understands client arcitecture and can assist in implementing basic infrastructure.",
-      ],
-    }, {
-      "summary": "Apply",
-      "signals": [
-        "Information security: The selection, design, justification, implementation and operation of controls and management strategies to maintain the security, confidentiality, integrity, availability, accountability and relevant compliance of information systems with legislation, regulation and relevant standards.",
-        "Solution architecture: The design and communication of high-level structures to enable and guide the design and development of integrated solutions that meet current and future business needs. In addition to technology components, solution architecture encompasses changes to service, process, organisation, and operating models. Architecture definition must demonstrate how requirements (such as automation of business processes) are met, any requirements which are not fully met, and any options or considerations which require a business decision. The provision of comprehensive guidance on the development of, and modifications to, solution components to ensure that they take account of relevant architectures, strategies, policies, standards and practices (including security) and that existing and planned solution components remain compatible.",
-      ],
-      "examples": [
-        "Explains the purpose of and provides advice and guidance on the application and operation of elementary physical, procedural and technical security controls. Performs security risk, vulnerability assessments, and business impact analysis for medium complexity information systems. Investigates suspected attacks and manages security incidents. Uses forensics where appropriate.",
-        "Supports a change programme or project through the preparation of technical plans and application of design principles that comply with enterprise and solution architecture standards (including security).",
-      ],
-    }, {
-      "summary": "Enable",
-      "signals": [
-        "Information security: The selection, design, justification, implementation and operation of controls and management strategies to maintain the security, confidentiality, integrity, availability, accountability and relevant compliance of information systems with legislation, regulation and relevant standards.",
-        "Solution architecture: The design and communication of high-level structures to enable and guide the design and development of integrated solutions that meet current and future business needs. In addition to technology components, solution architecture encompasses changes to service, process, organisation, and operating models. Architecture definition must demonstrate how requirements (such as automation of business processes) are met, any requirements which are not fully met, and any options or considerations which require a business decision. The provision of comprehensive guidance on the development of, and modifications to, solution components to ensure that they take account of relevant architectures, strategies, policies, standards and practices (including security) and that existing and planned solution components remain compatible.",
-      ],
-      "examples": [
-        "Provides advice and guidance on security strategies to manage identified risks and ensure adoption and adherence to standards. Obtains and acts on vulnerability information and conducts security risk assessments, business impact analysis and accreditation on complex information systems. Investigates major breaches of security, and recommends appropriate control improvements. Contributes to development of information security policy, standards and guidelines.",
-        "Contributes to the development of solution architectures in specific business, infrastructure or functional areas. Identifies and evaluates alternative architectures and the trade-offs in cost, performance and scalability. Produces specifications of cloud-based or on-premises components, tiers and interfaces, for translation into detailed designs using selected services and products. Supports a change programme or project through the preparation of technical plans and application of design principles that comply with enterprise and solution architecture standards (including security).",
-      ],
-    }, {
-      "summary": "Advise/Ensure",
-      "signals": [
-        "Information security: The selection, design, justification, implementation and operation of controls and management strategies to maintain the security, confidentiality, integrity, availability, accountability and relevant compliance of information systems with legislation, regulation and relevant standards.",
-        "Solution architecture: The design and communication of high-level structures to enable and guide the design and development of integrated solutions that meet current and future business needs. In addition to technology components, solution architecture encompasses changes to service, process, organisation, and operating models. Architecture definition must demonstrate how requirements (such as automation of business processes) are met, any requirements which are not fully met, and any options or considerations which require a business decision. The provision of comprehensive guidance on the development of, and modifications to, solution components to ensure that they take account of relevant architectures, strategies, policies, standards and practices (including security) and that existing and planned solution components remain compatible.",
-      ],
-      "examples": [
-        "Develops and communicates corporate information security policy, standards and guidelines. Contributes to the development of organisational strategies that address information control requirements. Identifies and monitors environmental and market trends and pro-actively assesses impact on business strategies, benefits and risks. Leads the provision of authoritative advice and guidance on the requirements for security controls in collaboration with experts in other functions such as legal, technical support. Ensures architectural principles are applied during design to reduce risk and drives adoption and adherence to policy, standards and guidelines.",
-        "Leads the development of solution architectures in specific business, infrastructure or functional areas. Ensures that appropriate tools and methods are available, understood and employed in architecture development. Within a change programme, leads the preparation of technical plans and, in liaison with business assurance and project staff, ensures that appropriate technical resources are made available. Provides advice on technical aspects of solution development and integration (including requests for changes, deviations from specifications, etc.) and ensures that relevant technical strategies, policies, standards and practices (including security) are applied correctly.",
-      ],
-    }, {
-      "summary": "Initiate/Influence",
-      "signals": [
-        "Information security: The selection, design, justification, implementation and operation of controls and management strategies to maintain the security, confidentiality, integrity, availability, accountability and relevant compliance of information systems with legislation, regulation and relevant standards.",
-        "Solution architecture: The design and communication of high-level structures to enable and guide the design and development of integrated solutions that meet current and future business needs. In addition to technology components, solution architecture encompasses changes to service, process, organisation, and operating models. Architecture definition must demonstrate how requirements (such as automation of business processes) are met, any requirements which are not fully met, and any options or considerations which require a business decision. The provision of comprehensive guidance on the development of, and modifications to, solution components to ensure that they take account of relevant architectures, strategies, policies, standards and practices (including security) and that existing and planned solution components remain compatible.",
-      ],
-      "examples": [
-        "Directs the development, implementation, delivery and support of an enterprise information security strategy aligned to the strategic requirements of the business. Ensures compliance between business strategies and information security and leads the provision of information security resources expertise, guidance and systems necessary to execute strategic and operational plans across all of the organisation's information systems.",
-        "Leads the development of architectures for complex solutions, ensuring consistency with specified requirements agreed with both external, and internal customers. Takes full responsibility for the balance between functional, service quality and systems management requirements within a significant area of the organisation. Establishes policy and strategy for the selection of solution architecture components, and co-ordinates design activities, promoting the discipline to ensure consistency. Ensures that appropriate standards (corporate, industry, national and international) are adhered to. Within a business change programme, manages the target design, policies and standards, working proactively to maintain a stable, viable architecture and ensure consistency of design across projects within the programme.",
-      ],
-    }],
-  },
-
-  "USINGDATA": {
-    "displayName": "Using Data",
-    "category": "DATA",
-    "description": "",
-    "milestones": [{
-      "summary": "Follow",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Assist",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Apply",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Enable",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Advise/Ensure",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Initiate/Influence",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }],
-  },
-
-  "TERMINOLOGY": {
-    "displayName": "Termiology",
-    "category": "DATA",
-    "description": "",
-    "milestones": [{
-      "summary": "Follow",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Assist",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Apply",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Enable",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Advise/Ensure",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Initiate/Influence",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }],
-  },
-
-  "ANALYSIS": {
-    "displayName": "Analysis",
-    "category": "DATA",
-    "description": "",
-    "milestones": [{
-      "summary": "Follow",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Assist",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Apply",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Enable",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Advise/Ensure",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Initiate/Influence",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }],
-  },
-
-  "GOVERNANCE": {
-    "displayName": "Govenance",
-    "category": "DATA",
-    "description": "",
-    "milestones": [{
-      "summary": "Follow",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Assist",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Apply",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Enable",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Advise/Ensure",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Initiate/Influence",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }],
-  },
-
-  "CLIENTS": {
-    "displayName": "Clients",
-    "category": "COMMERCIAL",
-    "description": "",
-    "milestones": [{
-      "summary": "Follow",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Assist",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Apply",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Enable",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Advise/Ensure",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Initiate/Influence",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }],
-  },
-
-  "FINANCIAL": {
-    "displayName": "Financial",
-    "category": "COMMERCIAL",
-    "description": "",
-    "milestones": [{
-      "summary": "Follow",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Assist",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Apply",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Enable",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Advise/Ensure",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Initiate/Influence",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }],
-  },
-
-  "SALES": {
-    "displayName": "Sales",
-    "category": "COMMERCIAL",
-    "description": "",
-    "milestones": [{
-      "summary": "Follow",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Assist",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Apply",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Enable",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Advise/Ensure",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Initiate/Influence",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }],
-  },
-
-  "BUSINESS": {
-    "displayName": "Business",
-    "category": "COMMERCIAL",
-    "description": "",
-    "milestones": [{
-      "summary": "Follow",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Assist",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Apply",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Enable",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Advise/Ensure",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Initiate/Influence",
-      "signals": [
-          "Area One",
-          "Area Two",
-          "Area Three",
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }],
-  },
-
-  "ACCOUNTABILITY": {
-    "displayName": "Accountability",
-    "category": "PROFESSIONAL",
-    "description": "",
-    "milestones": [{
-      "summary": "Follow",
-      "signals": [
-          "Time Management",
-          "Risk Assessment",
-          "Decision Making",
-          "Problem Solving"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Assist",
-      "signals": [
-          "Time Management",
-          "Risk Assessment",
-          "Decision Making",
-          "Problem Solving"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Apply",
-      "signals": [
-          "Time Management",
-          "Risk Assessment",
-          "Decision Making",
-          "Problem Solving"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Enable",
-      "signals": [
-          "Time Management",
-          "Risk Assessment",
-          "Decision Making",
-          "Problem Solving"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Advise/Ensure",
-      "signals": [
-          "Time Management",
-          "Risk Assessment",
-          "Decision Making",
-          "Problem Solving"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Initiate/Influence",
-      "signals": [
-          "Time Management",
-          "Risk Assessment",
-          "Decision Making",
-          "Problem Solving"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }],
-  },
-
-  "COMMUNICATION": {
-    "displayName": "Communication",
-    "category": "PROFESSIONAL",
-    "description": "",
-    "milestones": [{
-      "summary": "Follow",
-      "signals": [
-          "Feedback",
-          "Influencing skills",
-          "Difficult conversations",
-          "Stakeholder management"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Assist",
-      "signals": [
-          "Feedback",
-          "Influencing skills",
-          "Difficult conversations",
-          "Stakeholder management"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Apply",
-      "signals": [
-          "Feedback",
-          "Influencing skills",
-          "Difficult conversations",
-          "Stakeholder management"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Enable",
-      "signals": [
-          "Feedback",
-          "Influencing skills",
-          "Difficult conversations",
-          "Stakeholder management"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Advise/Ensure",
-      "signals": [
-          "Feedback",
-          "Influencing skills",
-          "Difficult conversations",
-          "Stakeholder management"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Initiate/Influence",
-      "signals": [
-          "Feedback",
-          "Influencing skills",
-          "Difficult conversations",
-          "Stakeholder management"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }],
-  },
-
-  "DEVELOPMENT": {
-    "displayName": "Shedder Development",
-    "category": "PROFESSIONAL",
-    "description": "",
-    "milestones": [{
-      "summary": "Follow",
-      "signals": [
-          "Research",
-          "Resilience",
-          "Coaching",
-          "Mentoring"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Assist",
-      "signals": [
-          "Research",
-          "Resilience",
-          "Coaching",
-          "Mentoring"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Apply",
-      "signals": [
-          "Research",
-          "Resilience",
-          "Coaching",
-          "Mentoring"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Enable",
-      "signals": [
-          "Research",
-          "Resilience",
-          "Coaching",
-          "Mentoring"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Advise/Ensure",
-      "signals": [
-          "Research",
-          "Resilience",
-          "Coaching",
-          "Mentoring"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
-      ],
-    }, {
-      "summary": "Initiate/Influence",
-      "signals": [
-          "Research",
-          "Resilience",
-          "Coaching",
-          "Mentoring"
-      ],
-      "examples": [
-          "Output One",
-          "Output Two",
-          "Output Three",
       ],
     }],
   }
@@ -1300,7 +711,10 @@ export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number 
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
-  .range(['#999', '#5b58a7', '#5cdcc1', '#ff8b27'])
+
+  .range(['#ae410c', '#60a080', '#cab345', '#bfac98'])
+  .range(['#03bc9c', '#e9c36b', '#f3a162', '#e86f52'])
+  
 
 export const titles = [
   {label: 'Associate Engineer (Follow)', minPoints: 0, maxPoints: 16},

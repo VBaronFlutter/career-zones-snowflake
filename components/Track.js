@@ -26,6 +26,8 @@ class Track extends React.Component<Props> {
           }
           h2 {
             margin: 0 0 10px 0;
+            text-transform: uppercase;
+            line-height: 1.4;
           }
           p.track-description {
             margin-top: 0;
@@ -68,7 +70,7 @@ class Track extends React.Component<Props> {
           </table>
           {currentMilestone ? (
             <div style={{flex: 1}}>
-              <h2>{track.displayName} at {currentMilestone.summary} level</h2>
+              <h2>{track.displayName}<br /><small>{currentMilestone.summary}</small></h2>
               {/* <h3>{currentMilestone.summary}</h3> */}
               <h4>Areas of focus:</h4>
               <ul>

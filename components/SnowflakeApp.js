@@ -5,12 +5,9 @@ import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
 import Wordmark from '../components/Wordmark'
-import LevelThermometer from '../components/LevelThermometer'
 import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
-import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
-import TitleSelector from '../components/TitleSelector'
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
@@ -49,21 +46,14 @@ const emptyState = (): SnowflakeAppState => {
     name: '',
     title: '',
     milestoneByTrack: {
+      'PEOPLE': 0,
+      'CULTURE': 0,
+      'GAMECHANGER': 0,
+      'RESULTS': 0,
+      'DIRECTION': 0,
+      'STRATEGICAWARENESS': 0,
       'ENGINEERING': 0,
-      'DATAMANAGE': 0,
-      'PROCESS': 0,
-      'SECURITY': 0,
-      'USINGDATA': 0,
-      'TERMINOLOGY': 0,
-      'ANALYSIS': 0,
-      'GOVERNANCE': 0,
-      'CLIENTS': 0,
-      'FINANCIAL': 0,
-      'SALES': 0,
-      'BUSINESS': 0,
-      'ACCOUNTABILITY': 0,
-      'COMMUNICATION': 0,
-      'DEVELOPMENT': 0
+      'PROCESS': 0
     },
     focusedTrackId: 'ENGINEERING'
   }
@@ -73,21 +63,14 @@ const defaultState = (): SnowflakeAppState => {
   return {
     title: '',
     milestoneByTrack: {
-      'ENGINEERING': 1,
-      'DATAMANAGE': 2,
-      'PROCESS': 3,
-      'SECURITY': 2,
-      'USINGDATA': 4,
-      'TERMINOLOGY': 1,
-      'ANALYSIS': 1,
-      'GOVERNANCE': 4,
-      'CLIENTS': 3,
-      'FINANCIAL': 2,
-      'SALES': 0,
-      'BUSINESS': 1,
-      'ACCOUNTABILITY': 2,
-      'COMMUNICATION': 2,
-      'DEVELOPMENT': 3
+      'PEOPLE': 0,
+      'CULTURE': 0,
+      'GAMECHANGER': 0,
+      'RESULTS': 0,
+      'DIRECTION': 0,
+      'STRATEGICAWARENESS': 0,
+      'ENGINEERING': 0,
+      'PROCESS': 0
     },
     focusedTrackId: 'ENGINEERING'
   }
@@ -160,14 +143,18 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         `}</style>
 
         <header style={{margin: '19px auto 20px'}}>
-          <h1>L&D Framework</h1>
+          <h1>Career Zones</h1>
           <a href="https://medium.com/" target="_blank">
             <Wordmark />
           </a>
         </header>
 
-        <section style={{display: 'flex'}}>
-          <div style={{flex: 1}}>
+          <h3>Do you want to follow the Individual Contributor of People Manager track? <select name="pets" id="pet-select">
+    <option value="ic">Individual Contributor</option>
+    <option value="people">People Manger</option>
+</select></h3>
+        <section style={{display: 'flex',alignItems: 'center'}}>
+          <div>
           <TrackSelector
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrackId={this.state.focusedTrackId}
@@ -199,7 +186,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     milestoneByTrack[trackId] = milestone
 
     const titles = eligibleTitles(milestoneByTrack)
-    const title = titles.indexOf(this.state.title) === -1 ? titles[0] : this.state.title
+    const title = titles.indexOf(this.state.title) === 0 ? titles[0] : this.state.title
 
     this.setState({ milestoneByTrack, focusedTrackId: trackId, title })
   }
