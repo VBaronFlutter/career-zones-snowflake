@@ -46,16 +46,16 @@ const emptyState = (): SnowflakeAppState => {
     name: '',
     title: '',
     milestoneByTrack: {
-      'PEOPLE': 0,
-      'CULTURE': 0,
-      'GAMECHANGER': 0,
-      'RESULTS': 0,
-      'DIRECTION': 0,
-      'STRATEGICAWARENESS': 0,
-      'ENGINEERING': 0,
-      'PROCESS': 0
+      'PEOPLE': 1,
+      'CULTURE': 1,
+      'GAMECHANGER': 1,
+      'RESULTS': 1,
+      'DIRECTION': 1,
+      'STRATEGICAWARENESS': 1,
+      'ENGINEERING': 1,
+      'PROCESS': 1
     },
-    focusedTrackId: 'ENGINEERING'
+    focusedTrackId: 'PEOPLE'
   }
 }
 
@@ -63,16 +63,16 @@ const defaultState = (): SnowflakeAppState => {
   return {
     title: '',
     milestoneByTrack: {
-      'PEOPLE': 0,
-      'CULTURE': 0,
-      'GAMECHANGER': 0,
-      'RESULTS': 0,
-      'DIRECTION': 0,
-      'STRATEGICAWARENESS': 0,
-      'ENGINEERING': 0,
-      'PROCESS': 0
+      'PEOPLE': 1,
+      'CULTURE': 1,
+      'GAMECHANGER': 1,
+      'RESULTS': 1,
+      'DIRECTION': 1,
+      'STRATEGICAWARENESS': 1,
+      'ENGINEERING': 1,
+      'PROCESS': 1
     },
-    focusedTrackId: 'ENGINEERING'
+    focusedTrackId: 'PEOPLE'
   }
 }
 
