@@ -140,6 +140,19 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             border-bottom: 2px solid #ccc;
             margin-bottom: 40px;
           }
+
+          h3 {
+            font-size: 2rem;
+            line-height: 1.6;
+            margin: 0;
+          }
+
+          select {
+            padding: 4px 16px;
+            font-size: 18px;
+            margin: -10px 8px 0 8px;
+            line-height: 2;
+          }
         `}</style>
 
         <header style={{margin: '19px auto 20px'}}>
@@ -149,10 +162,22 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           </a>
         </header>
 
-          <h3>Do you want to follow the Individual Contributor of People Manager track? <select name="pets" id="pet-select">
-    <option value="ic">Individual Contributor</option>
-    <option value="people">People Manger</option>
-</select></h3>
+          <h3>I am an 
+            <select name="role" id="pet-select">
+              <option value="engineer">Engineer</option>
+              <option value="po">Product Owner</option>
+              <option value="scrum">Scrum Master</option>
+              <option value="seit">Test Engineer</option>
+          </select>
+          <br />
+            interested in the
+            <select name="pets" id="pet-select">
+              <option value="ic">Individual Contributor</option>
+              <option value="people">People Manger</option>
+          </select>
+          <br />
+           career track.
+          </h3>
         <section style={{display: 'flex',alignItems: 'center'}}>
           <div>
           <TrackSelector
