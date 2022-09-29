@@ -51,7 +51,6 @@ class Track extends React.Component<Props> {
             line-height: 1.5em;
           }
         `}</style>
-        {/* <p className="track-description">{track.description}</p> */}
         <div style={{display: 'flex'}}>
           <table style={{flex: 0, marginRight: 50}}>
             <tbody>
@@ -71,7 +70,6 @@ class Track extends React.Component<Props> {
           {currentMilestone ? (
             <div style={{flex: 1}}>
               <h2>{track.displayName}<br /><small>{currentMilestone.summary}</small></h2>
-              {/* <h3>{currentMilestone.summary}</h3> */}
               <h4>Areas of focus:</h4>
               <ul>
                 {currentMilestone.signals.map((signal, i) => (

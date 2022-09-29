@@ -4,9 +4,8 @@ import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
-import Wordmark from '../components/Wordmark'
-import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
-import type { Milestone, MilestoneMap, TrackId } from '../constants'
+import { trackIds } from '../constants'
+import { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
 
 type SnowflakeAppState = {
@@ -157,9 +156,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
 
         <header style={{margin: '19px auto 20px'}}>
           <h1>Career Zones</h1>
-          <a href="https://medium.com/" target="_blank">
-            <Wordmark />
-          </a>
         </header>
 
           <h3>I am an 
@@ -209,11 +205,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     //click on chart
     const milestoneByTrack = this.state.milestoneByTrack
     milestoneByTrack[trackId] = milestone
-
-    const titles = eligibleTitles(milestoneByTrack)
-    const title = titles.indexOf(this.state.title) === 0 ? titles[0] : this.state.title
-
-    this.setState({ milestoneByTrack, focusedTrackId: trackId, title })
+    this.setState({ milestoneByTrack, focusedTrackId: trackId })
   }
 
   shiftFocusedTrack(delta: number) {
@@ -235,15 +227,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     console.log('sd')
     let prevMilestone = this.state.milestoneByTrack[this.state.focusedTrackId]
     let milestone = prevMilestone + delta
-    if (milestone < 0) milestone = 0
+    if (milestone < 1) milestone = 1
     if (milestone > 5) milestone = 5
     this.handleTrackMilestoneChange(this.state.focusedTrackId, ((milestone: any): Milestone))
-  }
-
-  setTitle(title: string) {
-    let titles = eligibleTitles(this.state.milestoneByTrack)
-    title = titles.indexOf(title) == -1 ? titles[0] : title
-    this.setState({ title })
   }
 }
 
